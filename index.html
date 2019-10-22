@@ -1,0 +1,33 @@
+---
+layout: default
+title: BP advanced coding class
+projects:
+  - title: My first project
+    image: http://placehold.it/800x600/600
+    description: Here is a description of the project.
+    link: #
+  - title: My second project
+    image: http://placehold.it/800x600/060
+    description: Here is another description of the project.
+    link: #
+  - title: My third project
+    image: http://placehold.it/800x600/006
+    description: Here is the last description.
+    link: #
+---
+<div class="row">
+
+  {% for project in page.projects %}
+  <div class="col-6 col-md-4">
+    <div class="card">
+      <img src="{{ project.image }}" class="card-img-top img-fluid d-block" alt="placeholder">
+      <div class="card-body">
+        <h5 class="card-title">{{ project.title }}</h5>
+        <p class="card-text">{{ project.description }}</p>
+        <a href="{{ project.link }}" class="btn btn-dark" target="_blank">Link to Project</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  
+</div>
